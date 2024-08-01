@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.logo{
+  width: 120px;
+  filter: brightness(1000%);
+}
+.header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+  background:radial-gradient(#09805c,#032431);
+  background-size:100% 300% ;
+  padding :16px 0;
+  color: aliceblue;
+
+}
+.header ul {
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+}
+.header ul li {
+  list-style: none;
+
+}
+.header ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.main {
+  padding: 16px 32px;
+  background-color: #eff2f8;
+}
+.banner {
+  background-image:linear-gradient(rgba(0, 22, 18, 0.712),rgba(0, 31, 14, 0.192)), url(assets/ba8a0e4b38e5fa8ca77b6fe5aa229f8a.jpg) ;
+  background-position-x: center;
+  background-size: cover;
+  height: 60vh;
+  display: flex;
+  padding: 16px 32px;
+  color: rgb(229, 241, 241);
+  gap: 32px;
+  box-shadow: #0324314b 0px 5px 10px;
+  border-radius: 32px;
+}
+.banner div{
+  flex: 1;
+  /* border: solid white; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+.banner div img {
+  width: 150px;
+  align-self: end;
+  transform: translateX(-50%);
+  animation: updown 3s ease-in-out 0s infinite forwards ;
+}
+.row2 {
+  display: flex;
+  padding: 32px ;
+  justify-content: space-around;
+  gap: 32px;
+  
+  
+}
+.row2>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-radius: 16px;
+  width: 300px;
+  overflow: hidden;
+  box-shadow: 0px 7px 10px 0px rgba(59, 65, 73, 0.295);
+  height: 30vh;
+
+}
+.row2>div .cover{
+  flex: 1;
+  overflow: hidden;    
+}
+.row2>div .cover img{
+  width: 100%;
+  transform: translateY(-30%);
+}
+.caption{
+  padding:16px 32px;
+}
+.footer{
+  height: 100px;
+  position: relative;
+  background:radial-gradient(#09805c,#032431);
+  background-size:100% 300% ;
+  background-position-y: bottom;
+  color: #ffffff;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+
+}
+.footer>div{
+  flex: 1;
+}
+@media (max-width:600px) {
+  .main {
+      padding: 8px 15px;
+  }
+  .banner div:last-of-type{
+      display: none;
+  }
+  .row2{
+      flex-direction:column;
+      height: auto;
+  }
+  .row2>div{
+      width: auto;
+  }
+}
+@keyframes updown {
+  0% {
+      transform: translateY(20px);
+  }
+  50% {
+      transform: translateY(-20px);
+  }
+  100% {
+      transform: translateY(20px);
+  }
+}
