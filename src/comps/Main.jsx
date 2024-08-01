@@ -1,47 +1,53 @@
+import heroPic from '../assets/heropic.jpg'
+import basta from '../assets/basta.jpg'
+import greekSalad from '../assets/GreekSalad.jpg'
+import brushetta from '../assets/brushetta.jpg'
+import RecipeCard from './recipeCard';
 const Main = () => {
+    const data =[
+        {
+            title:'Sossy Basta',
+            description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, animi facere. Deleniti exercitationem non facilis in temporibus dolores ipsa maxime omnis ipsam ex.',
+            price:10.99,
+            img:basta
+        },
+        {
+            title:'Greek salad',
+            description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, animi facere. Deleniti exercitationem non facilis in temporibus dolores ipsa maxime omnis ipsam ex.',
+            price:12.99,
+            img:greekSalad
+        },
+        {
+            title:'Brushetta',
+            description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, animi facere. Deleniti exercitationem non facilis in temporibus dolores ipsa maxime omnis ipsam ex.',
+            price:19.99,
+            img:brushetta
+        },
+    ]
     return ( 
         <main className="main">
         <div className="banner">
             <div>
-                <h1>Test the best food ever</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni beatae, est laborum commodi, ducimus at alias non laboriosam itaque libero molestias sapiente eligendi, sequi in delectus quis odit dolores nulla.</p>
+                <h1>Little Lemon</h1>
+                <p>tradisional recipes served with modren look.</p>
             </div>
             <div>
-                <img src="assets/Asset 9@4x.png" alt="" />
+                <img src={heroPic} alt="" />
             </div>
         </div>
 
         <div className="row2">
-            <div>
-                <div className="cover">
+           {data.map((recipe,index)=>
 
-                    <img src="assets/FOOD WALLPAPER 103.JPG" alt="" />
-                </div>
-                <div className="caption">
-                    <h3>healthy minu</h3>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, vel 
-                </div>
-            </div>
-            <div>
-                <div className="cover">
-
-                    <img src="assets/food-menu-restaurant-web-banner-template_120329-3353.jpg" alt="" />
-                </div>
-                <div className="caption">
-                    <h3>healthy minu</h3>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, vel 
-                </div>
-            </div>
-            <div>
-                <div className="cover">
-
-                    <img src="assets/28939417.jpg" alt="" />
-                </div>
-                <div className="caption">
-                    <h3>healthy minu</h3>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, vel 
-                </div>
-            </div>
+            <RecipeCard 
+                title={recipe.title}
+                disc={recipe.description} 
+                pic={recipe.img} 
+                price={recipe.price}
+                key={index} />
+           
+           )}
+           
         </div>
     </main>
      );
