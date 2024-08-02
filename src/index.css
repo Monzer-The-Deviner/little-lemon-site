@@ -11,25 +11,23 @@
   flex-direction: column;
 }
 .logo{
-  width: 120px;
-  filter: brightness(1000%);
+  width: 100px;
+
 }
 .header {
   position: fixed;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  padding: 16px 32px;
   gap: 16px;
   justify-content: space-between;
   align-items: center;
-  background:radial-gradient(#09805c,#032431);
+  background:#ffffff;
   background-size:100% 300% ;
-  padding :16px 0;
-  color: aliceblue;
+
 
 }
 .header ul {
-  margin-right: 16px;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -40,7 +38,6 @@
 
 }
 .header ul li a {
-  color: #ffffff;
   text-decoration: none;
 }
 .main {
@@ -48,8 +45,9 @@
   background-color: #eff2f8;
 }
 .banner {
-  background-image:linear-gradient(rgba(0, 22, 18, 0.712),rgba(0, 31, 14, 0.192)), url(assets/ba8a0e4b38e5fa8ca77b6fe5aa229f8a.jpg) ;
+  background-image:linear-gradient(rgba(0, 22, 18, 0.712),rgba(0, 31, 14, 0.192)), url(./assets/banner.jpg) ;
   background-position-x: center;
+  background-position-y: center;
   background-size: cover;
   height: 60vh;
   display: flex;
@@ -57,7 +55,7 @@
   color: rgb(229, 241, 241);
   gap: 32px;
   box-shadow: #0324314b 0px 5px 10px;
-  border-radius: 32px;
+  border-radius: 8px;
 }
 .banner div{
   flex: 1;
@@ -75,34 +73,33 @@
 }
 .row2 {
   display: flex;
-  padding: 32px ;
+  padding: 32px 0 ;
   justify-content: space-around;
   gap: 32px;
   
   
 }
-.row2>div {
+.card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   background-color: #ffffff;
   border-radius: 16px;
   width: 300px;
   overflow: hidden;
   box-shadow: 0px 7px 10px 0px rgba(59, 65, 73, 0.295);
-  height: 30vh;
+  height: fit-content;
 
 }
-.row2>div .cover{
-  flex: 1;
+.card .cover{
+  height: 100px;
   overflow: hidden;    
 }
-.row2>div .cover img{
+.card .cover img{
   width: 100%;
-  transform: translateY(-30%);
+
 }
 .caption{
-  padding:16px 32px;
+  padding:16px;
 }
 .footer{
   height: 100px;

@@ -1,7 +1,8 @@
+import logo from '../assets/logoSm.jpg'
 const Header = () => {
     return ( 
         <header className="header">
-        <img src="assets/logo.png" className="logo" alt="Little lemon" />
+        <img src={logo} className="logo" alt="Little lemon" />
         <ul>
             <li><a href="#">HOME</a></li>
             <li><a href="#">ABOUT</a></li>

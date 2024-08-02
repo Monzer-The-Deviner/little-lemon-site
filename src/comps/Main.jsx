@@ -1,8 +1,8 @@
-import heroPic from '../assets/heropic.jpg'
 import basta from '../assets/basta.jpg'
 import greekSalad from '../assets/GreekSalad.jpg'
 import brushetta from '../assets/brushetta.jpg'
 import RecipeCard from './recipeCard';
+import Banner from './banner';
 const Main = () => {
     const data =[
         {
@@ -25,16 +25,8 @@ const Main = () => {
         },
     ]
     return ( 
-        <main className="main">
-        <div className="banner">
-            <div>
-                <h1>Little Lemon</h1>
-                <p>tradisional recipes served with modren look.</p>
-            </div>
-            <div>
-                <img src={heroPic} alt="" />
-            </div>
-        </div>
+        <main className="main w-full">
+        <Banner />
 
         <div className="row2">
            {data.map((recipe,index)=>
