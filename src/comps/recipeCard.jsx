@@ -10,7 +10,7 @@ const RecipeCard = ({pic,title,disc,price}) => {
             <div className="caption flex flex-col gap-2">
                 <div className="flex font-bold justify-between ">
                     <h3>{title}</h3>
-                    <h3>{price}</h3>
+                    <h3>${price}</h3>
                 </div>
                 <p className="text-sm text-slate-900">{termedDisc}</p> 
             </div>

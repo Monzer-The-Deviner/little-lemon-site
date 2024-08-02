@@ -15,11 +15,11 @@
 
 }
 .header {
+  z-index: 10;
   position: fixed;
   width: 100%;
   display: flex;
-  padding: 16px 32px;
-  gap: 16px;
+  padding: 8px 32px;
   justify-content: space-between;
   align-items: center;
   background:#ffffff;
@@ -42,7 +42,7 @@
 }
 .main {
   padding: 16px 32px;
-  background-color: #eff2f8;
+
 }
 .banner {
   background-image:linear-gradient(rgba(0, 22, 18, 0.712),rgba(0, 31, 14, 0.192)), url(./assets/banner.jpg) ;
@@ -73,7 +73,6 @@
 }
 .row2 {
   display: flex;
-  padding: 32px 0 ;
   justify-content: space-around;
   gap: 32px;
   
@@ -116,6 +115,9 @@
 .footer>div{
   flex: 1;
 }
+.btn{
+  @apply px-4 py-2 bg-slate-800 rounded-md text-white
+}
 @media (max-width:600px) {
   .main {
       padding: 8px 15px;
@@ -131,6 +133,7 @@
       width: auto;
   }
 }
+
 @keyframes updown {
   0% {
       transform: translateY(20px);

@@ -25,21 +25,26 @@ const Main = () => {
         },
     ]
     return ( 
-        <main className="main w-full">
+        <main className="main w-full lg:max-w-5xl flex gap-4 flex-col">
         <Banner />
+        <div className='flex flex-col gap-4'>
+            <div className='flex items-center justify-between'>
+                <h3>Categories</h3>
+                <button className='btn'>menu</button>
+            </div>
+            <div className="row2">
+            {data.map((recipe,index)=>
 
-        <div className="row2">
-           {data.map((recipe,index)=>
-
-            <RecipeCard 
-                title={recipe.title}
-                disc={recipe.description} 
-                pic={recipe.img} 
-                price={recipe.price}
-                key={index} />
-           
-           )}
-           
+                <RecipeCard 
+                    title={recipe.title}
+                    disc={recipe.description} 
+                    pic={recipe.img} 
+                    price={recipe.price}
+                    key={index} />
+            
+            )}
+            
+            </div>
         </div>
     </main>
      );
