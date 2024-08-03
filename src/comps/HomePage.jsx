@@ -3,7 +3,7 @@ import greekSalad from '../assets/GreekSalad.jpg'
 import brushetta from '../assets/brushetta.jpg'
 import RecipeCard from './recipeCard';
 import Banner from './banner';
-const Main = () => {
+const HomePage = () => {
     const data =[
         {
             title:'Sossy Basta',
@@ -25,12 +25,13 @@ const Main = () => {
         },
     ]
     return ( 
-        <main className="main w-full lg:max-w-5xl flex gap-4 flex-col">
+    <>
+
         <Banner />
         <div className='flex flex-col gap-4'>
             <div className='flex items-center justify-between'>
                 <h3>Categories</h3>
-                <button className='btn'>menu</button>
+                <button className='btn bg-teal-950 text-white'>menu</button>
             </div>
             <div className="row2">
             {data.map((recipe,index)=>
@@ -46,8 +47,8 @@ const Main = () => {
             
             </div>
         </div>
-    </main>
+    </>
      );
 }
  
-export default Main;
+export default HomePage;
