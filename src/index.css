@@ -117,6 +117,9 @@
 .btn{
   @apply px-4 py-2 rounded-md 
 }
+input,select{
+  @apply px-2 py-1 rounded-md border border-gray-400 outline-slate-500
+}
 @media (max-width:600px) {
   .main {
       padding: 8px 15px;

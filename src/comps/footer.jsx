@@ -1,6 +1,6 @@
 const Footer = () => {
     return ( 
-    <footer className="footer">
+    <footer className="footer absolute bottom-0">
         <div>
             <img src="assets/logo.png" alt="Little lemon" className="logo" /> 
         </div>
