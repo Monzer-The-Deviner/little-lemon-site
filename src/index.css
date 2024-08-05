@@ -27,18 +27,11 @@
 
 
 }
-.header ul {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-
+.nav{
+  @apply text-sm flex flex-col absolute right-8 top-14 p-4 gap-4 bg-white rounded-md drop-shadow-md lg:flex-row lg:static lg:right-0 lg:top-0 lg:p-0 lg:bg-transparent lg:rounded-none lg:drop-shadow-none
 }
-.header ul li {
+.nav li{
   list-style: none;
-
-}
-.header ul li a {
-  text-decoration: none;
 }
 .main {
   padding: 16px 32px;
@@ -118,7 +111,7 @@
   @apply px-4 py-2 rounded-md 
 }
 input,select{
-  @apply px-2 py-1 rounded-md border border-gray-400 outline-slate-500
+  @apply px-2 py-1 rounded-md border border-gray-400 outline-slate-500 flex-1
 }
 @media (max-width:600px) {
   .main {

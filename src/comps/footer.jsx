@@ -1,10 +1,11 @@
+import logo from "../assets/logo.jpg" 
 const Footer = () => {
     return ( 
-    <footer className="footer absolute bottom-0">
+    <footer className="footer w-full items-center">
         <div>
-            <img src="assets/logo.png" alt="Little lemon" className="logo" /> 
+            <img src={logo} alt="Little lemon" className="logo brightness-[1000%] saturate-0" /> 
         </div>
-        <div>
+        <div className="text-xs">
             &copy; all rights receved
         </div>
     </footer>

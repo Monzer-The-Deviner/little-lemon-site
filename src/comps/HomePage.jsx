@@ -26,7 +26,7 @@ const HomePage = () => {
     ]
     return ( 
     <>
-        
+        <br />
         <Banner />
         <div className='flex flex-col gap-4'>
             <div className='flex items-center justify-between'>
