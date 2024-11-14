@@ -20,7 +20,7 @@ export const useFetch = (url,method='GET',requestBody='') => {
                 return res.json()
             } )
             .then(data=>{
-                console.log(data)
+
                 setitems(()=>data.results||data)
             })
             .catch(err=>{
@@ -40,7 +40,7 @@ export const useFetch = (url,method='GET',requestBody='') => {
 }
 export const handlePost =(url,data)=>{
     const authToken = localStorage.getItem('auth_token')
-    console.log(authToken)
+
     const headers = {
         'content-Type':'application/json',
     }
@@ -56,11 +56,10 @@ export const handlePost =(url,data)=>{
         if (res.ok) {
             return res.json()
         }else{
-            console.log('cant be post',res.json())
+             ('cant be post',res.json())
         }
 
     })
-    .then(data=>console.log(data))
     .catch(error=>console.error(error))
     
 }

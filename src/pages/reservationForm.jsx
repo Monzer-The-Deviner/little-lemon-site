@@ -7,12 +7,12 @@ const ReservationForm = () => {
   const token = localStorage.getItem('auth_token')
   const [prevReservations, setprevReservations] = useState([]);
   const [date, setDate] = useState("");
-  console.log(date);
+
   const [diners, setDiners] = useState(1);
   const [notes, setNotes] = useState("");
   const {items:reservations,isloading,error} = useFetch("http://127.0.0.1:8000/api/reservations/")
-  const months = ['Jan',"Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
   useEffect(()=>{
+    const months = ['Jan',"Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
     reservations?.forEach(res=>{
       const time = res.time.split("T")
       res["date"] ={
@@ -24,7 +24,6 @@ const ReservationForm = () => {
     })
     setprevReservations(reservations)
   },[reservations])
-  console.log(reservations)
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = {

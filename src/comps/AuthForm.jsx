@@ -23,7 +23,6 @@ const AuthForm = () => {
         })
         .then(res=>res.json())
         .then(data=>{
-            console.log(data);
             if (data['auth_token']){
                 localStorage.setItem('auth_token',data.auth_token)
             }else{
@@ -35,9 +34,6 @@ const AuthForm = () => {
 
     const handleSignup = async(e)=>{
         e.preventDefault();
-        console.log(e.target.username);
-        
-        
          fetch('http://127.0.0.1:8000/api/auth/users/',{
             method:'POST',     
             headers:{
@@ -50,8 +46,7 @@ const AuthForm = () => {
                 re_password,
             })
         })
-        .then(res=>res.json())
-        .then(data=>console.log('account created:',data))
+        .then(res=>res.ok? res.json():null)
         .catch(error=>console.error(error))
     }
     return ( 

@@ -6,11 +6,10 @@ import ItemsList from "../comps/ItemsList";
 
 const CategoryPage = () => {
     const {slug} = useParams()
-    console.log(slug);
+
     
     const {items: menuItems,error,isloading}=useFetch(`http://127.0.0.1:8000/api/menu-items/?category=${slug}`)
     const {items: category}=useFetch(`http://127.0.0.1:8000/api/categories/${slug}/`)
-    console.log(category);
     
     // const category = categ[0]
   return (
