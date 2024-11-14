@@ -11,4 +11,3 @@ test('initializeTimes returns a non-empty array', async () => {
   const { result } = renderHook(() => initializeTimes());
   expect(result.current.length).toBeGreaterThan(0);
 });
-
